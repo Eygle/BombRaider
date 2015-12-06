@@ -6,7 +6,7 @@ CPPFLAGS	=	-Wall -Wextra -Werror
 CPPFLAGS	+=	 -I./includes -I./libs/kompex -I./libs/libgdl_gl-2012.4/ -I./libs/Sounds
 
 LDFLAGS		=	-lpthread -ldl -lgdl_gl -lGL -lGLU -lkompex-sqlite-wrapper -lfmodex64-4.44.14
-LDFLAGS		+=	-Llibs/bin/ -lticpp
+LDFLAGS		+=	-Llibs/bin -lticpp
 
 NAME		=	bomberman
 
@@ -145,10 +145,9 @@ all		:	$(NAME)
 $(NAME)		:	$(OBJS)
 			$(CC) -o $(NAME) $(OBJS) $(LDFLAGS)
 
-ressources	:
-			svn checkout svn://ks355474.kimsufi.com/rendu_bomberman/
-			tar -xf rendu_bomberman/libs.tar.gz
-			tar -xf rendu_bomberman/ressources.tar.gz
+prepare		:	cp -r libs/bin_x86_64/* /usr/lib/ 
+
+prepare_x86	:	cp -r libs/bin_x86 /usr/lib32
 
 clean		:
 			@$(RM) $(OBJS)

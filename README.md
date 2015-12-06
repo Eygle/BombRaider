@@ -2,20 +2,29 @@
 A 3D bomberman game made with League of Legend and World of Warcraft models
 
 # Prerequisit
-In order to work, our game need some 3D models as resources but those models are pretty heavy.
-You can download them here
-
-Libraries dependencies (for unbuntu, add sudo apt-get install before)
+Libraries dependencies
+* make
 * g++
-* GL : libgl1-mesa-dev
-* glu : libglu1-mesa-dev
-* glut : freeglut3-dev
+* GL
+* glu
+* glut
+
+For unbuntu you can run:
+```bash
+sudo apt-get install make g++ libgl1-mesa-dev libglu1-mesa-dev freeglut3-dev
+```
 
 # Setup & Install BombRaider
-First of all extract and copy the downloaded models in the ressources folder.
+In BombRaider's root folder run:
+```bash
+sudo make prepare
+```
+**or**
+Copy all files in libs/bin_x86_64 in the folder /usr/lib (if you use a 32 bit system copy the files in bin_x86 instead)
+
+Run the following commands
 
 ```bash
-make prepare
 make
 ./bomberman
 ```
