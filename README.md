@@ -6,7 +6,7 @@ In order to work, our game need some 3D models as resources but those models are
 You can download them here
 
 Libraries dependencies (for unbuntu, add sudo apt-get install before)
-Markup : * g++
+ Markup : * g++
           * GL : libgl1-mesa-dev
           * glu : libglu1-mesa-dev
           * glut : freeglut3-dev
@@ -14,8 +14,8 @@ Markup : * g++
 # Setup & Install BombRaider
 First of all extract and copy the downloaded models in the ressources folder.
 
-Markup : ```bash
-         make prepare
-         make
-         ./bomberman
-         ```
+ Markup : ```bash
+          make prepare
+          make
+          ./bomberman
+          ```
